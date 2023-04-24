@@ -36,13 +36,35 @@ article {
 
 div {
     text-align: center;
-    font-size:larger;
-    color:white;
+    font-size: larger;
+    color: white;
     width: 15vw;
     height: 15vh;
-    background-color: green;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* para ver los cuadros inicialmente */
 }
+
+#c1 {
+    background-color: #adff2f;
+}
+
+#c2 {
+    background-color: pink;
+}
+
+#c3 {
+    background-color: lightskyblue;
+}
+
+
+#c4 {
+    background-color: grey;
+}
+
+
+#c5 {
+    background-color: goldenrod;
+}
+
