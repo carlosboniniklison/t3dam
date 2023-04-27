@@ -11,21 +11,21 @@ const colores = [];
 colores[0] = "green";
 colores[1] = "brown";
 colores[2] = "blue";
-colores[3] = "beige";
+colores[3] = "silver";
 colores[4] = "magenta";
 
 // solo para vuestro conocimiento, formas alternativas de declarar
 // e inicializar arrays. Preferible la del constructro new
 
-const colores2 = ["green", "brown", "blue", "beige", "magenta"];
+const colores2 = ["green", "brown", "blue", "silver", "magenta"];
 
-const colores3 = new Array("green", "brown", "blue", "beige", "magenta");
+const colores3 = new Array("green", "brown", "blue", "silver", "magenta");
 
 const colores4 = new Array(3);
 colores4[0] = "green";
 colores4[1] = "brown";
 colores4[2] = "blue";
-colores4.push("beige");
+colores4.push("silver");
 colores4.push("magenta");
 
 // funcion que sirve para mostrar un mensaje en un elemento
