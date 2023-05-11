@@ -1,5 +1,11 @@
 // código para manejar el modo dia y noche
 
+/* añadir aquí lo siguiente:
+  leer todas las variables guardadas en localStorage
+  especialmente la variable --modoInicial
+
+*/
+
 var modo = leerModoActual();
 if (modo=="dia") {
     ponerModoDia();    
@@ -9,10 +15,17 @@ if (modo=="dia") {
 
 
 function leerModoActual() {    
-    let modo = window.localStorage.getItem("modoGuardado");
+    let modo = window.localStorage.getItem("--modoGuardado");
     if (!modo) {
         // devolverá modo DIA si no hay modo guardado
-        modo="dia";
+        /* 
+        leer el --modoGuardado de nuestro CSS original
+                */
+
+        modo=document.documentElement.style.getPropertyValue("--modoGuardado");
+        // modo = getComputedStyle(document.documentElement).getPropertyValue('--modoGuardado');
+
+
     };
     return modo;
 }
@@ -23,7 +36,7 @@ function ponerModoDia() {
     let todo=document.getElementById("todo");
     todo.style.color="black";
     todo.style.backgroundColor="white";
-    window.localStorage.setItem("modoGuardado","dia");
+    window.localStorage.setItem("--modoGuardado","dia");
 
     // ocultamos el sol
     let iconoDia = document.getElementById("dia");
@@ -42,7 +55,7 @@ function ponerModoNoche() {
     let todo=document.getElementById("todo");
     todo.style.color="white";
     todo.style.backgroundColor="black";
-    window.localStorage.setItem("modoGuardado","noche");
+    window.localStorage.setItem("--modoGuardado","noche");
 
     // mostramos el sol
     let iconoDia = document.getElementById("dia");
